@@ -1,37 +1,20 @@
-⌨️ Tablify - Generador Interactivo de Esquemas SQL
+# ⌨️ Tablify - Gestor Interactivo de Estructuras SQL
 
-⚠️ Nota de Prototipo: Tablify se encuentra actualmente en su fase v1 (Prueba de Concepto). El objetivo de esta versión es validar la lógica de generación de comandos y la estructura modular. Aunque genera código SQL funcional, se recomienda su uso principalmente para fines de aprendizaje, prototipado rápido y pruebas en entornos controlados.
+> [!IMPORTANT]
+> **NOTA DE PROTOTIPO (v1):** Este proyecto es actualmente un **modelo de prueba** y una "Prueba de Concepto". 
+> Su función principal es validar la lógica de generación de comandos y la estructura modular del sistema para evitar errores de sintaxis manuales.
 
-Tablify es un proyecto personal diseñado para facilitar y agilizar la creación de tablas en bases de datos a través de un sistema interactivo por consola. El objetivo principal es simplificar el modelado de datos, permitiendo que cualquier persona con conocimientos básicos genere esquemas sólidos y profesionales sin enfrentarse a los errores típicos de sintaxis o lógica manual.
+Tablify es un proyecto personal diseñado para facilitar y agilizar la generación de tablas de bases de datos mediante un sistema interactivo por consola. Su objetivo es simplificar la creación de esquemas sólidos, permitiendo que usuarios con conocimientos básicos obtengan comandos SQL profesionales sin lidiar con los errores comunes de escritura.
 
-🌟 ¿Por qué usar Tablify?
-Muchas veces, escribir un CREATE TABLE largo puede llevar a errores (olvidar una coma, escribir mal una restricción o usar un tipo de dato incorrecto). Tablify te guía paso a paso, preguntándote qué necesitas y validando tus respuestas en tiempo real para asegurar que el resultado final sea impecable.
+## 🗺️ Hoja de Ruta (Roadmap)
 
-🗺️ Hoja de Ruta (Fases de Desarrollo)
-v1: El Motor de Comandos (Estado Actual)
-Es el prototipo funcional enfocado en la lógica y estructura.
-  Generación de Código: Crea la línea de comando exacta (la "sentencia") para introducir tu modelo en la base de datos.
-  Asistente de Consola: Te pregunta nombres, tipos de datos y restricciones (NOT NULL, UNIQUE, DEFAULT, etc.) de forma ordenada.
-  Seguridad: Valida que los nombres de tablas y columnas sean correctos para evitar errores en el motor SQL.
+* **v1 (Actual):** Motor de generación de sintaxis (Línea de comando).
+* **v2 (Próximamente):** Conectividad directa a DB y motor de consultas asistido.
+* **v3 (Futuro):** Visualización de datos e integración (Importar/Exportar) con Excel.
 
-v2: Conectividad y Consultas
-El paso hacia una herramienta de gestión activa.
-  Conexión Directa: Capacidad de conectarse a la base de datos y ejecutar la creación de tablas automáticamente.
-  Consultas Asistidas: Ayuda para generar comandos de búsqueda (SELECT) y manipulación de datos sin escribir código.
-
-v3: Integración con Excel y Visualización
-Enfocada en el manejo de datos a gran escala.
-  Visualización: Ver tus tablas directamente en la consola de forma legible.
-  Importación/Exportación: Posibilidad de cargar datos desde Excel a la base de datos y extraer la base de datos completa a un archivo Excel para respaldos.
-
-🛠️ Cómo funciona la v1
-El proyecto es modular, lo que facilita que en el futuro se adapte a otros motores como MySQL o MariaDB. Actualmente cuenta con módulos para:
-  Tipos de Datos: INTEGER, TEXT, REAL (decimales) y BLOB (binarios).
-  Integridad: Gestión asistida de PRIMARY KEY y FOREIGN KEY.
-  Validación: Uso de expresiones regulares para garantizar que cada entrada sea válida.
-
-Instrucciones rápidas:
-Ejecuta python main.py.
-  Sigue las instrucciones para nombrar tu tabla y añadir columnas.
-  Al terminar, copia la línea de comando generada y pégala en tu gestor de base de datos.
+## 🛠️ Características Técnicas
+* **Modularidad:** Código dividido por tipos de datos (INTEGER, TEXT, BLOB, REAL).
+* **Validación con RegEx:** Seguridad en nombres de identificadores y tipos de valores.
+* **Gestión de Restricciones:** Control inteligente de `NOT NULL`, `UNIQUE` y `CHECK`.
+* **Relaciones:** Soporte para `PRIMARY KEY` compuestas y `FOREIGN KEY`.
 
