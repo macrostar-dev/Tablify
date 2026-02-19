@@ -1,4 +1,5 @@
 ⌨️ Tablify - Generador Interactivo de Esquemas SQL
+
 ⚠️ Nota de Prototipo: Tablify se encuentra actualmente en su fase v1 (Prueba de Concepto). El objetivo de esta versión es validar la lógica de generación de comandos y la estructura modular. Aunque genera código SQL funcional, se recomienda su uso principalmente para fines de aprendizaje, prototipado rápido y pruebas en entornos controlados.
 
 Tablify es un proyecto personal diseñado para facilitar y agilizar la creación de tablas en bases de datos a través de un sistema interactivo por consola. El objetivo principal es simplificar el modelado de datos, permitiendo que cualquier persona con conocimientos básicos genere esquemas sólidos y profesionales sin enfrentarse a los errores típicos de sintaxis o lógica manual.
