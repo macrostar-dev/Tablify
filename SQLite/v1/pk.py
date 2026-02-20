@@ -1,13 +1,4 @@
 def add_primary_keys(columns):
-    """
-    Recibe la lista de columnas en formato:
-    [
-        {"name": "id", "sql": "id INTEGER"},
-        {"name": "email", "sql": "email TEXT"}
-    ]
-
-    Permite agregar múltiples PRIMARY KEY()
-    """
 
     if not columns:
         return columns
@@ -45,3 +36,4 @@ def add_primary_keys(columns):
         print("PRIMARY KEY agregada correctamente.")
 
     return columns
+
