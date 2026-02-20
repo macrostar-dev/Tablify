@@ -16,7 +16,6 @@ column_options = {
 
 table_name = input("Digite el nombre de la tabla: ")
 
-# Lista que guardará diccionarios {"name": "...", "sql": "..."}
 columns = []
 
 while True:
@@ -40,12 +39,10 @@ while True:
         print("⚠️ Opción no existe.")
         continue
 
-    # 🔥 PRIMARY KEY o FOREIGN KEY
     if option_selection in [5, 6]:
         column_options[option_selection]["function"](columns)
         continue
 
-    # 🔥 Tipos normales (ya retornan diccionario)
     result_dict = column_options[option_selection]["function"]()
 
     if not isinstance(result_dict, dict) or "name" not in result_dict or "sql" not in result_dict:
@@ -54,7 +51,6 @@ while True:
 
     columns.append(result_dict)
 
-# 🔥 Construcción final del CREATE TABLE
 if not columns:
     print("\n❌ No se agregaron columnas. No se pudo generar la tabla.")
 else:
@@ -65,3 +61,4 @@ else:
     print("🚀 SENTENCIA SQL GENERADA:")
     print("="*30)
     print(sql_command)
+
