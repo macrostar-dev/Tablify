@@ -1,13 +1,4 @@
 def add_foreign_keys(columns):
-    """
-    Recibe la lista de columnas:
-    [
-        {"name": "user_id", "sql": "user_id INTEGER"},
-        {"name": "email", "sql": "email TEXT"}
-    ]
-
-    Permite agregar múltiples FOREIGN KEY.
-    """
 
     if not columns:
         print("Primero debes crear columnas.")
@@ -49,3 +40,4 @@ def add_foreign_keys(columns):
         print("FOREIGN KEY agregada correctamente.")
 
     return columns
+
