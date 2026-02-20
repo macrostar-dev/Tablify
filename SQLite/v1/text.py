@@ -1,32 +1,21 @@
 import re
 
 def is_valid_identifier(name):
-    """
-    Valida nombre SQL: empieza con letra o _
-    y solo contiene letras, números o _
-    """
+
     return re.match(r'^[A-Za-z_][A-Za-z0-9_]*$', name) is not None
 
 
 def is_valid_integer(value):
-    """
-    Valida entero positivo (para LENGTH).
-    """
+
     return re.match(r'^\d+$', value) is not None
 
 
 def escape_quotes(text):
-    """
-    Escapa comillas simples para evitar romper SQL.
-    """
+
     return text.replace("'", "''")
 
 
 def generate_text_column_sql():
-    """
-    Genera definición SQL para columna TEXT
-    con validaciones para evitar sintaxis inválida.
-    """
 
     TEXT_MODEL = {
         "base": "TEXT",
@@ -114,10 +103,10 @@ def generate_text_column_sql():
     final_sql = " ".join(column_parts)
     print(f"\n✅ Definición TEXT generada: {final_sql}")
 
-    # 🔥 Retornamos el diccionario para que xxx.py no falle
     return {"name": name, "sql": final_sql}
 
 
 if __name__ == "__main__":
     resultado = generate_text_column_sql()
+
     print(f"Resultado: {resultado}")
