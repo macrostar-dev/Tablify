@@ -1,10 +1,7 @@
 import re
 
 def is_valid_identifier(name):
-    """
-    Valida nombre SQL: empieza con letra o _
-    y solo contiene letras, números o _
-    """
+
     return re.match(r'^[A-Za-z_][A-Za-z0-9_]*$', name) is not None
 
 
@@ -128,3 +125,4 @@ def generate_real_column_sql():
 if __name__ == "__main__":
     resultado = generate_real_column_sql()
     print(f"Resultado: {resultado}")
+
