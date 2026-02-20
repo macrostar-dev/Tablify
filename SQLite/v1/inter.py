@@ -117,12 +117,11 @@ def generate_integer_column_sql():
 
     final_sql = " ".join(column_parts)
     print(f"\n✅ Definición generada: {final_sql}")
-    
-    # 🔥 CAMBIO AQUÍ: Ahora devolvemos un diccionario con el nombre y el SQL
-    # Esto hace que 'xxx.py' funcione sin errores y que PK/FK encuentren la columna
+
     return {"name": name, "sql": final_sql}
 
 
 if __name__ == "__main__":
     resultado = generate_integer_column_sql()
+
     print(f"Resultado para el orquestador: {resultado}")
